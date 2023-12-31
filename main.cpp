@@ -17,48 +17,48 @@ int main() {
     std::uniform_int_distribution<int> distribution(1, 99);
 
     // Set to store random numbers
-    std::vector<int> vecRand1;
-    std::vector<int> vecRand2;
-    int vec1_score = 0;
-    int vec2_score = 0;
+    std::vector<int> Player1;
+    std::vector<int> Player2;
+    int Player1_score = 0;
+    int Player2_score = 0;
 
     // Generate 100 random numbers and insert them into the set
     for (int i = 0; i < 100; ++i) {
         int randomNum = distribution(gen);
-        vecRand1.push_back(randomNum);
+        Player1.push_back(randomNum);
     }
 
     // Generate 100 random numbers and insert them into the set
     for (int i = 0; i < 100; ++i) {
         int randomNum = distribution(gen);
-        vecRand2.push_back(randomNum);
+        Player2.push_back(randomNum);
     }
 
 
     std::cout << "Generated randomnumbers(vector): ";
     for(int i = 0 ; i < 99; ++i)
     {
-        std::cout <<"vec1: " << vecRand1.at(i) << " vec2: " << vecRand2.at(i);
-        if(maximus(vecRand1.at(i), vecRand2.at(i)) == vecRand1.at(i))
+        std::cout <<"Player1: " << Player1.at(i) << " Player2: " << Player2.at(i);
+        if(maximus(Player1.at(i), Player2.at(i)) == Player1.at(i))
         {
-            std::cout << " vec1 wins" << std::endl;
-            vec1_score++;
+            std::cout << " Player1 wins" << std::endl;
+            Player1_score++;
         }
         else
         {
-            std::cout << " vec2 wins" << std::endl;
-            vec2_score++;
+            std::cout << " Player2 wins" << std::endl;
+            Player2_score++;
         }
 
     }
-    std::cout << "Score is vec1 score: " << vec1_score << " to vec2_score: " << vec2_score << std::endl;
-    if(vec1_score > vec2_score)
+    std::cout << "Score is Player1 score: " << Player1_score << " to Player2 score: " << Player2_score << std::endl;
+    if(Player1_score > Player2_score)
     {
-        std::cout << "vec1 wins!!! " << std::endl;
+        std::cout << "Player1 wins!!! " << std::endl;
     }
     else
     {
-        std::cout << "vec2 wins!!! " << std::endl;
+        std::cout << "Player2 wins!!! " << std::endl;
     }
     std::cout << "\n\n" << std::endl;
     return 0;
