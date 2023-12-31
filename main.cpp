@@ -24,16 +24,11 @@ int main() {
 
     // Generate 100 random numbers and insert them into the set
     for (int i = 0; i < 100; ++i) {
-        int randomNum = distribution(gen);
-        Player1.push_back(randomNum);
+        int randomNum1 = distribution(gen);
+        Player1.push_back(randomNum1);
+        int randomNum2 = distribution(gen);
+        Player2.push_back(randomNum2);
     }
-
-    // Generate 100 random numbers and insert them into the set
-    for (int i = 0; i < 100; ++i) {
-        int randomNum = distribution(gen);
-        Player2.push_back(randomNum);
-    }
-
 
     std::cout << "Generated randomnumbers(vector): ";
     for(int i = 0 ; i < 99; ++i)
