@@ -30,6 +30,7 @@ int main() {
         Player2.push_back(randomNum2);
     }
 
+
     std::cout << "Generated randomnumbers(vector): ";
     for(int i = 0 ; i < 99; ++i)
     {
@@ -46,14 +47,14 @@ int main() {
         }
 
     }
-    std::cout << "Score is Player1 score: " << Player1_score << " to Player2 score: " << Player2_score << std::endl;
+    std::cout << "Total games won, Player1 won: " << Player1_score << " vs Player2 wins: " << Player2_score << std::endl;
     if(Player1_score > Player2_score)
     {
-        std::cout << "Player1 wins!!! " << std::endl;
+        std::cout << "Player1 won more games!!! " << std::endl;
     }
     else
     {
-        std::cout << "Player2 wins!!! " << std::endl;
+        std::cout << "Player2 won more games!!! " << std::endl;
     }
     std::cout << "\n\n" << std::endl;
     return 0;
